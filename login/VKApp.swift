@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct loginApp: App {
+struct VKApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContainerView()
         }
     }
 }
