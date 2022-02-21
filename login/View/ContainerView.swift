@@ -9,14 +9,15 @@ import SwiftUI
 
 struct ContainerView: View {
     
-    @State private var shouldShowMainView: Bool = false
+    @State private var shouldShowMainView: Bool = true
     
+//    var friendsAPI: FriendsAPI
+//    var groupsAPI: GroupsAPI
     var body: some View {
         NavigationView {
             HStack {
-                LogInView(isUserLoggedIn: $shouldShowMainView )
+                VKLoginWebView()
                 NavigationLink(destination: MainView(), isActive: $shouldShowMainView) {
-                    
                 }
             }
         }
