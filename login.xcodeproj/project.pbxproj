@@ -18,6 +18,7 @@
 		AD31F7D227B1567500157B16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31F7D127B1567500157B16 /* Preview Assets.xcassets */; };
 		AD44C8F127C252C100905914 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AD44C8F027C252C100905914 /* Realm */; };
 		AD44C8F327C252C100905914 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AD44C8F227C252C100905914 /* RealmSwift */; };
+		AD4C0F5327C65FC9003EAD76 /* FriendsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4C0F5227C65FC9003EAD76 /* FriendsDB.swift */; };
 		AD67D7AB27C2783D00891BFD /* FriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67D7AA27C2783D00891BFD /* FriendsAPI.swift */; };
 		AD67D7AD27C2786F00891BFD /* GroupsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67D7AC27C2786F00891BFD /* GroupsAPI.swift */; };
 		AD67D7B327C279B700891BFD /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AD67D7B227C279B700891BFD /* SwiftyJSON */; };
@@ -50,6 +51,7 @@
 		AD31F7CC27B1567100157B16 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		AD31F7CE27B1567500157B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD31F7D127B1567500157B16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AD4C0F5227C65FC9003EAD76 /* FriendsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsDB.swift; sourceTree = "<group>"; };
 		AD67D7AA27C2783D00891BFD /* FriendsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPI.swift; sourceTree = "<group>"; };
 		AD67D7AC27C2786F00891BFD /* GroupsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAPI.swift; sourceTree = "<group>"; };
 		AD67D7B427C27BFF00891BFD /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				AD67D7AA27C2783D00891BFD /* FriendsAPI.swift */,
+				AD4C0F5227C65FC9003EAD76 /* FriendsDB.swift */,
 				AD67D7AC27C2786F00891BFD /* GroupsAPI.swift */,
 				AD67D7BC27C27D7400891BFD /* Account.swift */,
 				AD67D7B427C27BFF00891BFD /* Session.swift */,
@@ -296,6 +299,7 @@
 				AD14775327B7D5230004CF56 /* ViewModifers.swift in Sources */,
 				AD14775527B7D7B70004CF56 /* ViewBuilders.swift in Sources */,
 				AD14774F27B7D0F40004CF56 /* FriendsList.swift in Sources */,
+				AD4C0F5327C65FC9003EAD76 /* FriendsDB.swift in Sources */,
 				AD67D7B527C27BFF00891BFD /* Session.swift in Sources */,
 				AD31F7CB27B1567100157B16 /* VKApp.swift in Sources */,
 				AD67D7C027C27E2300891BFD /* FriendsModel.swift in Sources */,

@@ -18,6 +18,7 @@ struct ContainerView: View {
             HStack {
                 VKLoginWebView()
                 NavigationLink(destination: MainView(), isActive: $shouldShowMainView) {
+                    EmptyView()
                 }
             }
         }

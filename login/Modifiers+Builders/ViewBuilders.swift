@@ -23,6 +23,7 @@ struct ProfileImage: View {
             .overlay(Circle().stroke(Color.gray, lineWidth: 1))
             .modifier(CircleShadow(shadowColor: .purple, shadowRadius: 4))
             //.shadow(radius: 4)
+            .modifier(AvatarAnimationModifier())
     }
 }
 
@@ -41,6 +42,7 @@ struct ProfileImageWhenOpen: View {
             .overlay(Circle().stroke(Color.gray, lineWidth: 1))
             //.modifier(CircleShadow(shadowColor: .purple, shadowRadius: 4))
             //.shadow(radius: 4)
+            
     }
     
 }

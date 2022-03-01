@@ -5,46 +5,61 @@
 //  Created by Elizaveta Sidorenkova on 20.02.2022.
 //
 
+import Foundation
+
 import UIKit
 import RealmSwift
 
-// MARK: - GroupsJSON
+
+
+// MARK: - Welcome
 struct GroupsJSON: Codable {
-    let response: ResponseGr
+    let response: GroupsResponse
 }
 
 // MARK: - Response
-struct ResponseGr: Codable {
+struct GroupsResponse: Codable {
     let count: Int
     let items: [GroupModels]
 }
 
 // MARK: - Item
-class GroupModels: Object ,Codable, Identifiable {
-    @objc dynamic var isMember, id: Int
-    @objc dynamic var photo100: String
-    @objc dynamic var isAdvertiser, isAdmin: Int
-    @objc dynamic var photo50, photo200: String
+class GroupModels: Object, Codable, Identifiable {
+    @objc dynamic var id, isClosed, isAdvertiser: Int
     let type: TypeEnum
-    @objc dynamic var screenName, name: String
-    @objc dynamic var isClosed: Int
+    let adminLevel: Int?
+    @objc dynamic var isMember: Int
+    let city: City?
+    @objc dynamic var photo50, photo200: String
+    @objc dynamic var isAdmin: Int
+    @objc dynamic var photo100: String
+    @objc dynamic var name, screenName: String
 
     enum CodingKeys: String, CodingKey {
-        case isMember = "is_member"
         case id
-        case photo100 = "photo_100"
+        case isClosed = "is_closed"
         case isAdvertiser = "is_advertiser"
-        case isAdmin = "is_admin"
+        case type
+        case adminLevel = "admin_level"
+        case isMember = "is_member"
+        case city
         case photo50 = "photo_50"
         case photo200 = "photo_200"
-        case type
+        case isAdmin = "is_admin"
+        case photo100 = "photo_100"
+        case name = "name"
         case screenName = "screen_name"
-        case name
-        case isClosed = "is_closed"
     }
 }
 
+
+
+// MARK: - City
+struct City: Codable {
+    let id: Int
+    let title: String
+}
+
 enum TypeEnum: String, Codable {
-    case group = "group"
     case page = "page"
 }
