@@ -7,20 +7,23 @@
 
 import SwiftUI
 import ASCollectionView
+import Kingfisher
 
 struct FriendProfileView: View {
     
     @State var dataExample = (0 ..< 10).map { $0 }
     
+    let friend: FriendModels
+    
     var body: some View {
         VStack (alignment: .leading) {
             HStack(spacing: 20) {
                 ProfileImageWhenOpen {
-                    Image(systemName: "photo")
+                    KFImage(URL(string: friend.photo100))
             }
                         
                 VStack(alignment: .leading) {
-                    Text("Name Surname")
+                    Text(friend.fullName)
                     Text("Description")
                         .font(.subheadline)
                         .foregroundColor(Color.gray)
@@ -45,8 +48,3 @@ struct FriendProfileView: View {
     }
 }
 
-struct FriendProfile_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendProfileView()
-    }
-}

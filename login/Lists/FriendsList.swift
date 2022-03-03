@@ -7,39 +7,22 @@
 
 import SwiftUI
 
+
 struct FriendsView: View {
-    var body: some View {
-            FriendsList()
-                .navigationBarTitle(Text("Friends"))
-    }
-}
 
-struct FriendsList: View {
-    var body: some View {
-        List(0 ..< 10) { item in
-            NavigationLink (
-                destination: FriendProfileView(),
-                label: {
-                    HStack(spacing: 20) {
-                        ProfileImage {
-                            Image(systemName: "photo")
-                        }.padding()
-                        
-                        VStack(alignment: .leading) {
-                            Text("Name Surname")
-                            Text("Description")
-                                .font(.subheadline)
-                                .foregroundColor(Color.gray)
-                        }
-                    }
-                })
-        }
-    }
-}
+    @ObservedObject var viewModel: FriendsViewModel
 
-struct FriendsList_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendsView()
-        // ProfileScreen()
+    init(viewModel: FriendsViewModel) {
+        self.viewModel = viewModel
+    }
+
+    var body: some View {
+        List(viewModel.friends) { friend in
+            NavigationLink (destination: FriendProfileView(friend: friend),
+                            label: {
+                                FriendCell(friend: friend)
+                            })
+        }.onAppear(perform: viewModel.fetchFriends)
+        .navigationBarTitle("Friends", displayMode: .inline)
     }
 }

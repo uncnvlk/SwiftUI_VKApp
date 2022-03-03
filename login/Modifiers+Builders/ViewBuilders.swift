@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileImage: View {
-    var content: Image
+    var content: KFImage
 
-    init(@ViewBuilder content: () -> Image) {
+    init(@ViewBuilder content: () -> KFImage) {
         self.content = content()
     }
 
@@ -22,13 +23,14 @@ struct ProfileImage: View {
             .overlay(Circle().stroke(Color.gray, lineWidth: 1))
             .modifier(CircleShadow(shadowColor: .purple, shadowRadius: 4))
             //.shadow(radius: 4)
+            .modifier(AvatarAnimationModifier())
     }
 }
 
 struct ProfileImageWhenOpen: View {
-    var content: Image
+    var content: KFImage
 
-    init(@ViewBuilder content: () -> Image) {
+    init(@ViewBuilder content: () -> KFImage) {
         self.content = content()
     }
 
@@ -40,6 +42,7 @@ struct ProfileImageWhenOpen: View {
             .overlay(Circle().stroke(Color.gray, lineWidth: 1))
             //.modifier(CircleShadow(shadowColor: .purple, shadowRadius: 4))
             //.shadow(radius: 4)
+            
     }
     
 }
